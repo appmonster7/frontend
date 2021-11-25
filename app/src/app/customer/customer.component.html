@@ -1,0 +1,39 @@
+<table class="table table-bordered bg">
+
+
+    <tr>
+        <th>name</th>
+        <th>phoneNumber</th>
+        <th>city</th>
+        <th>email</th>
+        
+        
+    </tr>
+    
+    <tr *ngFor="let c of customers">
+        
+        <td>{{c.name}}</td>
+    
+        <td>{{c.phoneNumber}}</td>
+    
+        <td>{{c.city}}</td>
+        <td>{{c.email}}</td>
+      
+        
+        
+    
+    </tr>
+   
+    
+
+    </table>
+    
+   <br>
+   <div class="group">
+    <input type="submit"  class="button" value="Renewal">
+   </div>
+   <div class="group">
+    <input type="submit" (click)=" carpage()" class="button" value="Register">
+   </div>
+
+   
