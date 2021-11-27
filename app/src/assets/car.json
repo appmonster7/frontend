@@ -1,0 +1,17 @@
+[
+    {
+        "regNo":"KA06HD1001",
+        "model_name ": "camaro",
+        "manufact_yr ": 2015,
+        "pur_yr" : 2019,
+        "price ": 800000
+    },
+    {
+        "regNo":"KA24LM9999",
+        "model_name ": "ram",
+        "manufact_yr ": 2010,
+        "pur_yr" : 2012,
+        "price ": 1000000
+    }
+]
+    

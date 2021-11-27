@@ -15,22 +15,21 @@ export class LoginComponent implements OnInit {
 
   cust! : Customer;
   auth : LoginModel;
-  userid : String = "";
- password : String = "";
+  
    
   constructor(private router : Router,private service:AppService) { 
     this.auth = new LoginModel();
     this.cust = new Customer();
   
   }
-  validate ()
-  {
-
-    if(this.userid == 'thanu' && this.password == 'india19')
-      this.router.navigate(['/customer']);
-    else
-      alert('Athentication failed')
-
+  loggedIn() {
+    let user = this.service.validate(this.auth);
+    if(user != null) {
+      localStorage.setItem("user", JSON.stringify(user));
+      this.service.saveCust(this.cust);
+      this.router.navigate(['customer']);
+    } else
+      alert("Invalid User ID/Password");
   }
   enter2()
   {

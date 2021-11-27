@@ -15,23 +15,23 @@
                         <form>
                             <div class="form-group">
                                 <label class="form-control-label">Registration Number</label>
-                                <input type="text" [(ngModel)]=cars.regNo #reg=ngModel placeholder="KA06HD2002" class="form-control">
+                                <input type="text" name="regNo" [(ngModel)]=cardet.regNo #reg=ngModel placeholder="KA06HD2002" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Model Name</label>
-                                <input type="text" [(ngModel)]=cars.model_name #mdl=ngModel class="form-control" i>
+                                <input type="text" name="model_name" [(ngModel)]=cardet.model_name #mdl=ngModel class="form-control" i>
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Manufacture Year</label>
-                                <input type="text" [(ngModel)]=cars.manufact_yr #mnf=ngModel class="form-control">
+                                <input type="text" name="manufact_yr" [(ngModel)]=cardet.manufact_yr #mnf=ngModel class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Purchased Year</label>
-                                <input type="text" [(ngModel)]=cars.pur_yr #pur=ngModel class="form-control">
+                                <input type="text" name="pur_yr" [(ngModel)]=cardet.pur_yr #pur=ngModel class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Price</label>
-                                <input type="text" [(ngModel)]=cars.price #price=ngModel class="form-control">
+                                <input type="text" name="price" [(ngModel)]=cardet.price #price=ngModel class="form-control">
                             </div>
                             
 
@@ -40,7 +40,7 @@
                                     <!-- Error Message -->
                                 </div>
                                 <div class="col-lg-6 login-btm login-button">
-                                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                                    <button type="submit" (click)="RegQuote()" class="btn btn-outline-primary">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -49,7 +49,4 @@
                 <div class="col-lg-3 col-md-2"></div>
             </div>
         </div>
-
-
-
-
+        

@@ -22,4 +22,9 @@ export class CustomerComponent implements OnInit {
   {
     this.router.navigate(['car']);
   }
+
+  insrpage()
+  {
+    this.router.navigate(['insurance'])
+  }
 }
