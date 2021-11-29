@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms';
 import { CustomerComponent } from './customer/customer.component';
 import { HomeComponent } from './home/home.component';
 import { InsuranceComponent } from './insurance/insurance.component';
-import { GetQuoteComponent } from './get-quote/get-quote.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -19,8 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     CarComponent,
     CustomerComponent,
     HomeComponent,
-    InsuranceComponent,
-    GetQuoteComponent
+    InsuranceComponent
+  
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,45 @@
-<router-outlet></router-outlet>
+<nav  class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    
+    <img src="/assets/images/car.jpeg" style="width:100%">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+      <i class="fa fa-home w3-xxlarge"></i>
+      <p>HOME</p>
+    </a>
+  
+    <a *ngIf="!service.isUserLoggedIn()" [routerLink]="['login']" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-sign-in w3-xxlarge"></i>
+      <p>LOGIN</p>
+    </a>
+
+    <a *ngIf="service.isUserLoggedIn()" [routerLink]="['home']" (click)= "service.logout()"class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-sign-out w3-xxlarge"></i>
+        <p>LOGOUT</p>
+    </a>
+
+    <a *ngIf="service.isUserLoggedIn()" [routerLink]="['customer']" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-address-card-o w3-xxlarge"></i>
+        <p>PROFILE</p>
+    </a>
+
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-user w3-xxlarge"></i>
+      <p>ABOUT</p>
+    </a>
+  
+    <a href="#service" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-eye w3-xxlarge"></i>
+      <p>Service</p>
+    </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-envelope w3-xxlarge"></i>
+      <p>CONTACT</p>
+    </a>
+  </nav>
+
+  
+
+  
+<br>
+<div class="container">
+   <router-outlet></router-outlet>
+</div>

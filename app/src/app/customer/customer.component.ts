@@ -1,8 +1,9 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { Car } from '../CarModel';
+import { Customer } from '../CustModel';
 import { AppService } from '../service/app.service';
-import { Customer } from './custModel';
 
 @Component({
   selector: 'app-customer',
@@ -11,20 +12,35 @@ import { Customer } from './custModel';
 })
 export class CustomerComponent implements OnInit {
 
-  customers:Customer[]=[];
-  constructor(private service:AppService,private router : Router) { }
+  customer!: Customer;
+  expanded : boolean = false;
+  constructor(private service: AppService, private router: Router) { }
 
   ngOnInit(): void {
-    this.customers=this.service.listCust();
+    this.getCustomerDetails();
+    if(sessionStorage.getItem("carId") !== null)
+    sessionStorage.removeItem("carId");
   }
-  
-  carpage()
-  {
+
+  getCustomerDetails() {
+    this.service.getCustDetails().subscribe((response) => {
+      this.customer = response;
+    },(error:HttpErrorResponse) => {
+      alert(error.message);
+    });
+  }
+  carpage() {
     this.router.navigate(['car']);
   }
 
-  insrpage()
-  {
-    this.router.navigate(['insurance'])
+  insureNow(car : Car){
+    sessionStorage.setItem("carId",car.carId.toString());
+    this.router.navigate(['insurance']);
   }
+
+  reniwalNew(car : Car){
+    sessionStorage.setItem("carId",car.carId.toString());
+    this.router.navigate(['insurance']);
+  }
+
 }

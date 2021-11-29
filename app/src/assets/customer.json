@@ -1,0 +1,16 @@
+[
+    {
+    
+    "name" : "Thanu",
+   "phoneNumber" : 9900805483,
+   "city" : "Bengalore",
+   "email" : "tanu1998@gmail.com"
+   
+    },
+    {
+        "name" : "Adithya",
+        "phoneNumber" : 9740577964,
+        "city" : "pune",
+        "email" : "adithyaroy@gmail.com"
+    }
+]

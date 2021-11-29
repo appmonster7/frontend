@@ -1,11 +1,13 @@
-export class CarModel{
+import { insuranceModel } from "./insuranceModel";
+
+
+
+export class Car{
     public carId! : number;
     public regNo! : string;
-    public model_name! : string;
-    public manufact_yr! : number;
-    public pur_yr! : number;
+    public modelName! : string;
+    public manufctYear! : number;
+    public purchYear! : number;
     public price! : number;
-  
-    
-
+    public insurance! : insuranceModel;
 }

@@ -1,134 +1,102 @@
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
 
-  <!-- Icon Bar (Sidebar - hidden on small screens) -->
- 
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Trusted Car Insurance </a>
-      </li>
-      
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['login']" (click)="loginpage()" >Login</a>
       </li>
      
 
     </ul>
-  </nav>
-  
+  </nav> -->
 
-  
-  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center ">
-    <!-- Avatar image in top left corner -->
-    
-      
-    <!-- <img src="/assets/images/car.jpeg" style="width:100%"> -->
-  
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-      <i class="fa fa-home w3-xxlarge"></i>
-      <p>HOME</p>
-    </a> 
-    
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i class="fa fa-user w3-xxlarge"></i>
-      <p>ABOUT</p>
-    </a>
-  
-    <a href="#service" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i class="fa fa-eye w3-xxlarge"></i>
-      <p>Service</p>
-    </a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i class="fa fa-envelope w3-xxlarge"></i>
-      <p>CONTACT</p>
-    </a>  
-  </nav>
-
-  
- 
- 
- 
-  <!-- Icon Bar (Sidebar - hidden on small screens) -->
- 
   <!-- Navbar on small screens (Hidden on medium and large screens) -->
-  <div class="w3-top w3-hide-large w3-hide-medium " id="myNavbar">
+  <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
     <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
       <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
       <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
       <a href="#service" class="w3-bar-item w3-button" style="width:25% !important">Service</a>
       <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-      
+  
     </div>
   </div>
-  
   <!-- Page Content -->
-  <div class="w3-padding-large " id="main" >
-   
-    <header class="w3-container w3-padding-32 w3-center w3-black " id="home" >
-      
-      <div  class="car">
-        <h1 class="w3-jumbo"><span class="w3-hide-small"></span>Trusted Car Insurance</h1>
-        <br>
-        <br>
-        <h5>Regestration Number:</h5>
-      <input type="text"> 
-      <input  name="regNo"   type="submit" (click)=" RegQuote()" value="Get Quote">
-      </div>
-      <!-- <img src="/assets/images/car.jpeg" alt="boy" class="w3-image" width="992" height="1000"> -->
-      
+  <div class="w3-padding-large" id="main">
+  
+    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  
+  <div class="car">
+    
+      <h1 class="w3-jumbo"><span class="w3-hide-small"></span>Trusted Car Insurance</h1>
+      <p>Trusted name with safety assurence</p>
+    </div>
+     
     </header>
   
-
     <!-- About Section -->
     <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
       <h2 class="w3-text-light-grey">About</h2>
       <hr style="width:200px " class="w3-opacity">
-      <p>Trusted car Insurance Company Limited is a joint venture company between 
-  Tata Group and American International Group (AIG). Tata AIG General Insurance Company Limited celebrates 
-  20 years of service as on 2020, since it commenced operations in India on January 22, 2001. 
-  The Company has grown strongly to emerge as the preferred private general insurance company in India with several pioneering firsts to its credit.
-  the Company has a robust multi-channel distribution network of 40,000+ licensed agents and 437+ licensed brokers. 
-  The Company has a workforce of over 6,000 employees, including 550+ claim experts and a dedicated Customer Service & Operations 
-  team (as of March 2019), consistently delivering superior service experiences powered by the latest innovations in technology.
+      <p>Trusted car Insurance Company Limited is a joint venture company between
+        Tata Group and American International Group (AIG). Tata AIG General Insurance Company Limited celebrates
+        20 years of service as on 2020, since it commenced operations in India on January 22, 2001.
+        The Company has grown strongly to emerge as the preferred private general insurance company in India with several
+        pioneering firsts to its credit.
+        the Company has a robust multi-channel distribution network of 40,000+ licensed agents and 437+ licensed brokers.
+        The Company has a workforce of over 6,000 employees, including 550+ claim experts and a dedicated Customer Service
+        & Operations
+        team (as of March 2019), consistently delivering superior service experiences powered by the latest innovations in
+        technology.
       </p>
-      
-      
+  
+  
       <!-- Grid for pricing tables -->
-     
+  
       <!-- End Grid/Pricing tables -->
-      </div>
-      
-     
     </div>
-    
+  
+  
+  
+  
     <!-- Portfolio Section -->
-    <div class="w3-padding-large" id="service">
-      <h3 class="w3-padding-16 w3-text-light-grey">Service</h3>
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="service">
+      <h2 class="w3-text-light-grey">Service</h2>
+      <hr style="width:200px " class="w3-opacity">
       <div class="w3-row-padding" style="margin: 0 -5px">
+  
         <div class="w3-half w3-margin-bottom">
           <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
             <li class="w3-dark-grey w3-xlarge w3-padding-32">Third-Party Insurance</li>
-            <li class="w3-padding-16"><p style="text-align:justify ;">The third party car insurance policy is a basic but legally mandatory
-   car insurance policy. It protects you from the legal and financial liabilities that arise from damages caused to a
-   third-party person or property by your insured car. However, this policy does not cover any damages to the insured car.
-  suffers a financial loss as a result of accidental damage, the own damage cover takes care of the damages caused only to the insured car.</p></li>
-            
+            <li class="w3-padding-16" style="padding-bottom: 40px !important;">
+              <p style="text-align:justify ;">The third party car insurance policy is a basic but legally mandatory
+                car insurance policy. It protects you from the legal and financial liabilities that arise from damages
+                caused to a third-party person or property by your insured car. However, this policy does not cover any
+                damages to the insured car.
+                suffers a financial loss as a result of accidental damage, the own damage cover takes care of the damages
+                caused only to the insured car.</p>
+            </li>
+  
           </ul>
         </div>
   
-        <div class="w3-half">
+        <div class="w3-half w3-margin-bottom">
           <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
             <li class="w3-dark-grey w3-xlarge w3-padding-32">Comprehensive Insurance</li>
-            <li class="w3-padding-16"><p style="text-align: justify;">The comprehensive car insurance policy offers extensive coverage as compared to a
-   basic third party four wheeler insurance and offers protection against third-party liabilities as well as damage due to accidents, 
-  loss of the car, natural disasters like floods, earthquakes, cyclones, etc. and man-made disasters. However, damages due to driving under 
-  the influence of substances and driving outside of the designated geographical area are not covered under a comprehensive four
-   wheeler insurance policy.</p>
-  </li>
-            
+            <li class="w3-padding-16">
+              <p style="text-align: justify;">The comprehensive car insurance policy offers extensive coverage as compared
+                to a basic third party four wheeler insurance and offers protection against third-party liabilities as
+                well as
+                damage due to accidents, loss of the car, natural disasters like floods, earthquakes, cyclones, etc. and
+                man-made disasters.
+                However,damages due to driving underthe influence of substances and driving outside of the designated
+                geographical area are not covered under a
+                comprehensive four wheeler insurance policy.</p>
+            </li>
+  
           </ul>
         </div>
-  </div>
-  </div>
+      </div>
+    </div>
     <!-- Contact Section -->
     <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
       <h2 class="w3-text-light-grey">Contact</h2>
@@ -152,22 +120,18 @@
           </button>
         </p>
       </form>
-    <!-- End Contact Section -->
+      <!-- End Contact Section -->
     </div>
-    
-      <!-- Footer -->
+  
+    <!-- Footer -->
     <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-      <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-    <!-- End footer -->
+      <i style="margin: 10px;" class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i style="margin: 10px;" class="fa fa-instagram w3-hover-opacity"></i>
+      <i style="margin: 10px;" class="fa fa-snapchat w3-hover-opacity"></i>
+      <i style="margin: 10px;" class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i style="margin: 10px;" class="fa fa-twitter w3-hover-opacity"></i>
+      <i style="margin: 10px;" class="fa fa-linkedin w3-hover-opacity"></i>
+      <!-- End footer -->
     </footer>
-    
+  </div>
   <!-- END PAGE CONTENT -->
-  
-  
-  

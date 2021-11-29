@@ -1,3 +1,6 @@
+import { Car } from "./CarModel";
+
+
 export class Customer
 {
    public customerId! : string;
@@ -6,5 +9,5 @@ export class Customer
    public city! : string;
    public email! : string;
    public password! : string;
-   public repassword! : string;
+   public car! : Car[];
 }

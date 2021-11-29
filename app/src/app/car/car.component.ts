@@ -1,7 +1,10 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CarModel } from '../CarModel';
-import { AppService } from '../service.car/app.service';
+import { Car } from '../CarModel';
+import { AppService } from '../service/app.service';
+
+
 
 @Component({
   selector: 'app-car',
@@ -10,29 +13,27 @@ import { AppService } from '../service.car/app.service';
 })
 export class CarComponent implements OnInit {
 
-cardet! : CarModel;
-car : CarModel[] = [];
-
-  constructor(private router : Router,private service:AppService) {
-    this.cardet = new CarModel();
+  car! : Car;
+  constructor(private appService: AppService, private router: Router) {
+    this.car = new Car();
    }
 
-  
-
-   RegQuote() {
-    let user = this.service.validatereg(this.cardet);
-    if(user == null) {
-      localStorage.setItem("user", JSON.stringify(user));
-      this.service.saveCar(this.cardet);
-      this.router.navigate(['get-quote']);
-    } else
-      alert("Not Registered");
-  }
-
-  
-
   ngOnInit(): void {
-    
   }
 
+  submit(){
+    
+    this.appService.saveCar(this.car).subscribe((response:string) => {
+        if(response === "Car added"){
+        this.router.navigate(['/customer']);
+        }else{
+          alert('Car already exists');
+        }
+    },(error:HttpErrorResponse) => {
+      alert(error.message);
+    }); 
+  }
+
+ 
+ 
 }
