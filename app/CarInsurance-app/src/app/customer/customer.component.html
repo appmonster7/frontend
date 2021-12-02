@@ -1,0 +1,78 @@
+<div class="w3-padding-large" id="main">
+    <table class="table table-bordered bg">
+
+
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>City</th>
+            <th>Email</th>
+
+
+        </tr>
+
+        <tr>
+            <td>{{customer.name}}</td>
+            <td>{{customer.phoneNumber}}</td>
+            <td>{{customer.city}}</td>
+            <td>{{customer.email}}</td>
+        </tr>
+    </table>
+    <br>
+
+    <table *ngIf="customer.car.length>0" id=myTable>
+        <tr>
+            <th>Car Register No.</th>
+            <th>Model Name</th>
+            <th>Manufacture Year</th>
+            <th>Purchased Year</th>
+            <th>Price</th>
+            <th>Insurance</th>
+
+        </tr>
+        <ng-container *ngFor="let car of customer.car">
+            <tr>
+                <td>{{car.regNo}}</td>
+                <td>{{car.modelName}}</td>
+                <td>{{car.manufctYear}}</td>
+                <td>{{car.purchYear}}</td>
+                <td>{{car.price}}</td>
+                <td *ngIf="car.insurance === null"><button style="background-color: #6a87e6 ; color:white" type="submit"
+                        (click)="insureNow(car)">Insure Now</button> <button
+                        style="background-color: #e66a6a ; color:white ; margin-left: 10px;"   type="submit"
+                        (click)="delete(car.carId)">Delete</button></td>
+
+                <td *ngIf="car.insurance !== null" (click)="car.expanded = !car.expanded"><a>Insurance Details</a></td>
+            </tr>
+            <ng-container *ngIf="car.expanded">
+                <tr>
+                    <td  colspan="6"><span style="padding-left: 100px; "> <br>
+                        
+                        Insurance Number : {{car.insurance.insuranceNo}} <br>
+                        
+                        Coverage Type : {{car.insurance.coverageType}} <br>
+                        
+                        Date Issued : {{car.insurance.dateIssued}} <br>
+                       
+                        Expiry Date : {{car.insurance.expiryDate}} <br>
+                      
+                        Premium Amount : {{car.insurance.amount}}
+                    </span> <br>
+                    <button style="background-color: royalblue ; color:solid black ; " type="submit"
+                    (click)="insureNow(car)">Renewal</button>
+                    <button style="background-color: green; color:solid black ; margin-left: 10px" type="submit"
+                    (click)="payment()">Payment</button>
+                </td>
+        
+                   
+                </tr>
+               
+            </ng-container>
+        </ng-container>
+
+    </table>
+    <div class="group">
+        <input type="submit" (click)=" carpage()" style="background-color: #6a87e6 ; color:white" class="button"
+            value="Register">
+    </div>
+</div>
